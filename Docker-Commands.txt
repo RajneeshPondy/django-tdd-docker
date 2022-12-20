@@ -1,0 +1,31 @@
+Build the new image and spin up the two containers:
+$ docker-compose up -d --build
+
+Run the migrations:
+$ docker-compose exec movies python manage.py migrate --noinput
+
+To remove the volumes along with the containers
+$ docker-compose down -v 
+
+To list containers
+$ docker ps
+
+To see docker logs
+$ docker-compose logs -f
+
+To login to postgres DB container
+$ docker-compose exec movies-db psql --username=movies --dbname=movies_dev
+
+To check that the  database volume was created as by running
+$ docker volume inspect django-tdd-docker_postgres_data
+
+Update the file permissions locally:
+$ chmod +x app/entrypoint.sh
+for windows system
+c:/> ICACLS app/entrypoint.sh
+
+To build and run container
+$ docker-compose up -d --build
+
+Ensure http://localhost:8009/ still works.(test dajgno server)
+
