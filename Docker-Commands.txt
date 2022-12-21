@@ -27,5 +27,5 @@ c:/> ICACLS app/entrypoint.sh
 To build and run container
 $ docker-compose up -d --build
 
-Ensure http://localhost:8009/ still works.(test dajgno server)
+Ensure http://localhost:8009/ still works.(test djagno server)
 
