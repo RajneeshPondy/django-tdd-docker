@@ -29,3 +29,7 @@ $ docker-compose up -d --build
 
 Ensure http://localhost:8009/ still works.(test djagno server)
 
+pytest
+--------------
+$ docker-compose exec movies pytest
+$ docker-compose exec movies pytest -k models
